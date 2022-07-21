@@ -14,7 +14,7 @@ const schema = new Schema(
             type:String,
             required:true
         },
-        skypelink:{
+        twitterlink:{
             type:String,
             required:true
         },
@@ -22,11 +22,11 @@ const schema = new Schema(
             type:String,
             required:true
         },
-        instagramlink:{
+        LinkedInlink:{
             type:String,
             required:true
         }
     }
 );
-const teachersdata = mongoose.model("teachersdata", schema);
-module.exports = teachersdata;
+const Teacher = mongoose.model("teachers", schema);
+module.exports = Teacher;

@@ -1,10 +1,14 @@
 var express = require("express");
+let body_parser = require("body-parser");
 const mongoose = require("mongoose");
 var app = express();
 
-mongoose.connect("mongodb://localhost:27017/KidCoder")
-app.use(express.json());
+app.use(body_parser.json({limit: '50mb'}));
+app.use(body_parser.urlencoded({limit: '50mb', extended: true}));  
 
+mongoose.connect("mongodb://localhost:27017/kidcoder")
+app.use(express.json());
+app.use(express.static("public"));
 const db = mongoose.connection;
 db.on("error", error=> console.log(error));
 db.on("open", ()=> console.log("Connection Successful"));
