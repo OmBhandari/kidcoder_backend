@@ -25,6 +25,9 @@ const schema = new Schema(
         LinkedInlink:{
             type:String,
             required:true
+        },
+        srno:{
+            type:Number
         }
     }
 );

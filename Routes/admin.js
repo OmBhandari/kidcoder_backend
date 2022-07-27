@@ -70,6 +70,9 @@ router.post("/saveteacher", async (req, res) => {
 
 router.post("/teachers", async (req, res) => {
     let teachers = await Teacher.find();
+    for(let i = 0; i < teachers.length; i++){
+        teachers[i]["srno"] = i + 1;
+    }
     res.json({data:teachers});
 });
 
@@ -136,6 +139,9 @@ router.post("/savecourse", async (req, res) => {
 
 router.post("/courses", async (req, res) => {
     let courses = await Course.find();
+    for(let i = 0; i < courses.length; i++){
+        courses[i]["srno"] = i + 1;
+    }
     res.json({data:courses});
 });
 
@@ -196,6 +202,9 @@ router.post("/savegallery", async (req, res) => {
 
 router.post("/galleries", async (req, res) => {
     let galleries = await Gallery.find();
+    for(let i = 0; i < galleries.length; i++){
+        galleries[i]["srno"] = i + 1;
+    }
     res.json({data:galleries});
 });
 

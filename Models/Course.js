@@ -21,6 +21,9 @@ const schema = new Schema(
         fees: {
             type: String,
             required: true
+        },
+        srno:{
+            type:Number
         }
     }
 );

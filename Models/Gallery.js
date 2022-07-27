@@ -9,7 +9,10 @@ const schema = new Schema(
         photo:{
             type:String,
             required:true
-        }
+        },
+        srno:{
+            type:Number
+        }  
     }
 );
 const Gallery = mongoose.model("gallery", schema);
