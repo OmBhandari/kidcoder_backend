@@ -111,7 +111,8 @@ router.post("/savecourse", async (req, res) => {
         description: body.data.description,
         photo: imagepath,
         timing: body.data.timing,
-        fees: body.data.fees
+        fees: body.data.fees,
+        popular: body.data.popular
     });
     if(body.data.id == ""){
         course.save().then(result => {
@@ -126,7 +127,8 @@ router.post("/savecourse", async (req, res) => {
             name: body.data.name,
             description: body.data.description,
             timing: body.data.timing,
-            fees: body.data.fees
+            fees: body.data.fees,
+            popular: body.data.popular
         });
         if(imagepath != "")
         result = await Course.findByIdAndUpdate(body.data.id,{

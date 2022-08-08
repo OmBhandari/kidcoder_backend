@@ -24,6 +24,9 @@ const schema = new Schema(
         },
         srno:{
             type:Number
+        },
+        popular:{
+            type:Boolean
         }
     }
 );
